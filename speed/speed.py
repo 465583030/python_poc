@@ -8,11 +8,10 @@ def make_app():
     app.geometry('200x100')
     app.config(bg='#303030')
     Label(text='实时网速监控',font=('Hack',23,'bold'),bg='#303030',fg='white').pack()
-    Label(name='lb2',text='_kb/s'     ,font=('Hack',20,'bold'),bg='#303030',fg='white').pack()
+    Label(name='lb2',text='_kb/s',font=('Hack',20,'bold'),bg='#303030',fg='white').pack()
     return app
 
 def speed_test():
-
     s1 = psutil.net_io_counters(pernic=True)['以太网']
     time.sleep(1)
     s2 = psutil.net_io_counters(pernic=True)['以太网']
